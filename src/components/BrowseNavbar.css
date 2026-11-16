@@ -1,0 +1,164 @@
+
+.browse-navbar {
+  width: 100%;
+  height: 70px;
+  padding: 0 4%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #141414;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+.browse-nav-left,
+.browse-nav-right {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.browse-logo {
+  color: #e50914;
+  font-size: 27px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.browse-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.browse-nav-links button,
+.nav-icon,
+.profile-btn {
+  background: none;
+  border: none;
+  color: #e5e5e5;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.browse-nav-links button:hover,
+.browse-nav-links button.active {
+  color: white;
+  font-weight: bold;
+}
+
+.browse-nav-right {
+  gap: 20px;
+}
+
+.nav-icon {
+  font-size: 19px;
+}
+
+.browse-search-input {
+  width: 180px;
+  padding: 9px 12px;
+  background: #141414;
+  color: white;
+  border: 1px solid white;
+  outline: none;
+}
+
+.profile-container {
+  position: relative;
+}
+
+.profile-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 22px;
+}
+
+.profile-btn span {
+  font-size: 10px;
+}
+
+.profile-dropdown {
+  position: absolute;
+  top: 45px;
+  right: 0;
+  width: 180px;
+  background: #181818;
+  border: 1px solid #444;
+  display: flex;
+  flex-direction: column;
+  padding: 8px 0;
+}
+
+.profile-dropdown button {
+  background: none;
+  border: none;
+  color: white;
+  text-align: left;
+  padding: 12px 15px;
+  cursor: pointer;
+}
+
+.profile-dropdown button:hover {
+  background: #333;
+}
+
+.profile-dropdown .logout-btn {
+  border-top: 1px solid #444;
+  font-weight: bold;
+}
+
+@media (max-width: 850px) {
+  .browse-navbar {
+    padding: 0 15px;
+  }
+
+  .browse-nav-left {
+    gap: 15px;
+  }
+
+  .browse-nav-links {
+    gap: 12px;
+  }
+
+  .browse-nav-links button {
+    font-size: 12px;
+  }
+
+  .browse-logo {
+    font-size: 21px;
+  }
+}
+
+@media (max-width: 600px) {
+  .browse-navbar {
+    height: auto;
+    min-height: 65px;
+    flex-wrap: wrap;
+    padding: 12px 15px;
+    gap: 12px;
+  }
+
+  .browse-nav-left {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .browse-nav-links {
+    overflow-x: auto;
+    max-width: 75%;
+  }
+
+  .browse-nav-links button {
+    white-space: nowrap;
+  }
+
+  .browse-nav-right {
+    margin-left: auto;
+  }
+}

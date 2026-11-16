@@ -1,8 +1,13 @@
 import './Hero.css'
 import movieBackground from '../assets/movie-background.jpeg'
+import { useNavigate } from 'react-router-dom'
+import { useState } from 'react'
+
 
 function Hero(){
     console.log(movieBackground);
+    const navigate = useNavigate()
+    const [email, setEmail] = useState('')
     return(
         <section
   className="hero-section"
@@ -25,9 +30,17 @@ function Hero(){
                 </p>
 
                 <div className='email-form'>
-                    <input type="email" placeholder='Email address' />
-
-                    <button>Get Started</button>
+                    <input
+  type="email"
+  placeholder="Email address"
+  value={email}
+  onChange={(e) => setEmail(e.target.value)}
+/>
+<button
+  onClick={() => navigate('/signup', { state: { email } })}
+>
+  Get Started
+</button>
                 </div>
                 <div className="hero-curve"></div>
 
